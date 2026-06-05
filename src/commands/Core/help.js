@@ -169,7 +169,7 @@ export async function createInitialHelpMenu(client) {
 
     const supportButton = new ButtonBuilder()
         .setLabel("Support Server")
-        .setURL("https://discord.gg/tZQE3QYqQc")
+        .setURL("https://discord.gg/tZQE3WYqQc")
         .setStyle(ButtonStyle.Link);
 
     const touchpointButton = new ButtonBuilder()
