@@ -75,7 +75,7 @@ export async function createInitialHelpMenu(client) {
     const botName = client?.user?.username || "Bot";
     const embed = createEmbed({ 
         title: `🤖 ${botName} Help Center`,
-        description: "Your all-in-one Discord companion for moderation, economy, fun, and server management.",
+        description: "Your 24/7 Mod Bot ensuring the community stays clean, respectful, and fun. Drop the spam, bring the chai! ☕✨",
         color: 'primary'
     });
 
@@ -158,7 +158,7 @@ export async function createInitialHelpMenu(client) {
     );
 
     embed.setFooter({ 
-        text: "Made with ❤️" 
+        text: "HANGOUT MOD" 
     });
     embed.setTimestamp();
 
@@ -169,12 +169,12 @@ export async function createInitialHelpMenu(client) {
 
     const supportButton = new ButtonBuilder()
         .setLabel("Support Server")
-        .setURL("https://discord.gg/QnWNz2dKCE")
+        .setURL("https://discord.gg/tZQE3QYqQc")
         .setStyle(ButtonStyle.Link);
 
     const touchpointButton = new ButtonBuilder()
-        .setLabel("Learn from Touchpoint")
-        .setURL("https://www.youtube.com/@TouchDisc")
+        .setLabel("Learn about HANGOUT KERALA")
+        .setURL("https://hangoutkeralaofficial.blogspot.com")
         .setStyle(ButtonStyle.Link);
 
     const selectRow = createSelectMenu(
