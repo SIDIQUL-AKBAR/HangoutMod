@@ -46,7 +46,7 @@ class HangoutMod extends Client {
 
   async start() {
     try {
-      startupLog('Starting TitanBot...');
+      startupLog('Starting Hangout Mod...');
       await new Promise(resolve => setTimeout(resolve, 1000));
       
       startupLog('Initializing database...');
@@ -356,7 +356,7 @@ class HangoutMod extends Client {
 }
 
 try {
-  const bot = new TitanBot();
+  const bot = new HangoutMod();
   
   const setupShutdown = () => {
     process.on('SIGTERM', () => bot.shutdown('SIGTERM'));
@@ -380,7 +380,7 @@ try {
   process.exit(1);
 }
 
-export default TitanBot;
+export default HangoutMod;
 
 
 
