@@ -9,20 +9,20 @@ export default {
 
     async execute(interaction) {
         const githubButton = new ButtonBuilder()
-            .setLabel('?? Report Bug on GitHub')
+            .setLabel('?? Report Bug To Developer')
             .setStyle(ButtonStyle.Link)
-            .setURL('https://github.com/codebymitch/TitanBot/issues');
+            .setURL('https://discord.gg/users/1479018247692091495');
 
         const row = new ActionRowBuilder().addComponents(githubButton);
 
         const bugReportEmbed = createEmbed({
             title: '?? Bug Report',
-            description: 'Found a bug? Please report it on our GitHub Issues page!\n\n' +
+            description: 'Found a bug? Please report it to the developer!\n\n' +
             '**When reporting a bug, please include:**\n' +
-            '• ?? Detailed description of the issue\n' +
-            '• ?? Steps to reproduce the problem\n' +
-            '• ?? Screenshots if applicable\n' +
-            '• ?? Your bot version and environment\n\n' +
+            'â€¢ ?? Detailed description of the issue\n' +
+            'â€¢ ?? Steps to reproduce the problem\n' +
+            'â€¢ ?? Screenshots if applicable\n' +
+            'â€¢ ?? Your bot version and environment\n\n' +
             'This helps us fix issues faster and more effectively!',
             color: 'error'
         })
