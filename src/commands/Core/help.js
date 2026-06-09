@@ -22,25 +22,25 @@ const BUG_REPORT_BUTTON_ID = "help-bug-report";
 const HELP_MENU_TIMEOUT_MS = 5 * 60 * 1000;
 
 const CATEGORY_ICONS = {
-    Core: "ℹ️",
+    Core: "🌴",
     Moderation: "🛡️",
     Economy: "💰",
     Fun: "🎮",
-    Leveling: "📊",
+    Leveling: "🏅",
     Utility: "🔧",
     Ticket: "🎫",
-    Welcome: "👋",
+    Welcome: "🌺",
     Giveaway: "🎉",
-    Counter: "🔢",
+    Counter: "📊",
     Tools: "🛠️",
     Search: "🔍",
     Reaction_Roles: "🎭",
-    Community: "👥",
+    Community: "🌍",
     Birthday: "🎂",
     Config: "⚙️",
 };
 
-
+    
 
 
 
@@ -55,8 +55,8 @@ export async function createInitialHelpMenu(client) {
 
     const options = [
         {
-            label: "📋 All Commands",
-            description: "View all available commands with pagination",
+            label: "🌴 Hangout Kerala Commands"
+            description: "View all Hangout Kerala features and commands",
             value: ALL_COMMANDS_ID,
         },
         ...categoryDirs.map((category) => {
@@ -66,7 +66,7 @@ export async function createInitialHelpMenu(client) {
             const icon = CATEGORY_ICONS[categoryName] || "🔍";
             return {
                 label: `${icon} ${categoryName}`,
-                description: `View commands in the ${categoryName} category`,
+                description: `Explore ${categoryName} commands`,
                 value: category,
             };
         }),
@@ -74,65 +74,65 @@ export async function createInitialHelpMenu(client) {
 
     const botName = client?.user?.username || "Bot";
     const embed = createEmbed({ 
-        title: `🤖 ${botName} Help Center`,
-        description: "Your 24/7 Mod Bot ensuring the community stays clean, respectful, and fun. Drop the spam, bring the chai! ☕✨",
+        title: `🌴 ${botName} Help Center`,
+        description: "Your all-in-one community assistant for Hangout Kerala. Safe, fun, and always ready to help. ✨",
         color: 'primary'
     });
 
     embed.addFields(
         {
             name: "🛡️ **Moderation**",
-            value: "Server moderation, user management, and enforcement tools",
+            value: "Keep the community safe and welcoming with moderation tools",
             inline: true
         },
         {
             name: "💰 **Economy**",
-            value: "Currency system, shops, and virtual economy",
+            value: "Earn, spend, and manage your virtual currency"
             inline: true
         },
         {
             name: "🎮 **Fun**",
-            value: "Games, entertainment, and interactive commands",
+            value: "Games, entertainment, and engaging community activities"
             inline: true
         },
         {
-            name: "📊 **Leveling**",
-            value: "User levels, XP system, and progression tracking",
+            name: "🏅 **Leveling**",
+            value: "Track activity, gain XP, and climb the rankings",
             inline: true
         },
         {
-            name: "🎫 **Tickets**",
-            value: "Support ticket system for server management",
+            name: "🎫 **Ticket**",
+            value: "Support tickets and member assistance features",
             inline: true
         },
         {
-            name: "🎉 **Giveaways**",
-            value: "Automated giveaway management and distribution",
+            name: "🎉 **Giveaway**",
+            value: "Create and manage exciting community giveaways",
             inline: true
         },
         {
-            name: "👋 **Welcome**",
-            value: "Member welcome messages and onboarding",
+            name: "🌺 **Welcome**",
+            value: "Welcome messages, greetings, and join settings",
             inline: true
         },
         {
-            name: "🎂 **Birthdays**",
-            value: "Birthday tracking and celebration features",
+            name: "🎂 **Birthday**",
+            value: "Celebrate member birthdays and special occasions",
             inline: true
         },
         {
-            name: "👥 **Community**",
-            value: "Community tools, applications, and member engagement",
+            name: "🌍 **Community**",
+            value: "Features that help members connect and interact",
             inline: true
         },
         {
             name: "⚙️ **Config**",
-            value: "Server and bot configuration management commands",
+            value: "Configure and customize bot settings",
             inline: true
         },
         {
-            name: "🔢 **Counter**",
-            value: "Live counter channel setup and counter controls",
+            name: "📊 **Counter**",
+            value: "Server statistics, counters, and activity tracking",
             inline: true
         },
         {
@@ -142,7 +142,7 @@ export async function createInitialHelpMenu(client) {
         },
         {
             name: "🎭 **Reaction Roles**",
-            value: "Self-assignable roles using reaction-role systems",
+            value: "Self-assign roles using reaction menus",
             inline: true
         },
         {
@@ -152,7 +152,7 @@ export async function createInitialHelpMenu(client) {
         },
         {
             name: "🔧 **Utilities**",
-            value: "Useful tools and server utilities",
+            value: "Helpful tools and everyday server commands",
             inline: true
         }
     );
