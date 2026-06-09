@@ -40,7 +40,7 @@ const CATEGORY_ICONS = {
     Config: "⚙️",
 };
 
-    
+
 
 
 
