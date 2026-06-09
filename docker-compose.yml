@@ -1,7 +1,7 @@
 services:
   bot:
     build: .
-    container_name: titanbot
+    container_name: HangoutMod
     restart: unless-stopped
     environment:
       - NODE_ENV=production
@@ -14,11 +14,11 @@ services:
       db:
         condition: service_healthy
     networks:
-      - titan-network
+      - HangoutMod-network
 
   db:
     image: postgres:15-alpine
-    container_name: titanbot-db
+    container_name: HangoutMod-db
     restart: unless-stopped
     environment:
       - POSTGRES_USER=${POSTGRES_USER:-titanbot}
@@ -32,7 +32,7 @@ services:
       timeout: 5s
       retries: 5
     networks:
-      - titan-network
+      - HangoutMod-network
 
 networks:
   titan-network:
